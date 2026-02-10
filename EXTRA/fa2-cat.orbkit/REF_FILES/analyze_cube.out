@@ -1,0 +1,298 @@
+================================================================================
+|                               TheoDORE 3.3-pre                               |
+|         Theoretical Density, Orbital Relaxation and Exciton analysis         |
+|                                                                              |
+|                            Author: Felix Plasser                             |
+|             Contributions by: L. Stojanovic, G. Hermann, S. Mai,             |
+|                   M.F.S.J. Menger, P. Kimber, F. Dinkelbach                  |
+--------------------------------------------------------------------------------
+|                       References for the modules used                        |
+|        (see also http://theodore-qc.sourceforge.net/literature.html)         |
+|                                                                              |
+|   Transition density matrix analysis:                                        |
+|     F. Plasser and H. Lischka                                                |
+|     J. Chem. Theory Comput. (2012), 8, 2777.                                 |
+|                                                                              |
+|   Transition and difference density matrix analysis:                         |
+|     F. Plasser, M. Wormit, A. Dreuw                                          |
+|     J. Chem. Phys. (2014), 141, 024106.                                      |
+|                                                                              |
+|   Conditional densities and DNTOs:                                           |
+|     F. Plasser                                                               |
+|     ChemPhotoChem (2019), DOI: 10.1002/cptc.201900014.                       |
+|                                                                              |
+|   Electron-hole entanglement:                                                |
+|     F. Plasser                                                               |
+|     J. Chem. Phys. (2016), 144, 194107.                                      |
+|                                                                              |
+|   cclib for structure parsing (http://cclib.github.io):                      |
+|     N. M. O'Boyle, A. L. Tenderholt, K. M. Langner                           |
+|     J. Comput. Chem. (2008), 29, 839.                                        |
+|                                                                              |
+|   orbkit for orbital/density plotting (http://orbkit.github.io):             |
+|     G. Hermann, V. Pohl, J. C. Tremblay, B. Paulus, H.-C. Hege, A. Schild    |
+|     J. Comput. Chem. (2016), 37, 1511.                                       |
+|                                                                              |
+|   Program citation:                                                          |
+|     F. Plasser, J. Chem. Phys. (2020), 152, 084108.                          |
+--------------------------------------------------------------------------------
+|                 Transition density matrix analysis (UHF/UKS)                 |
+================================================================================
+
+
+Running alpha-spin analysis in directory ALPHA
+Finished parsing orca.molden.input
+
+MO file orca.molden.input parsed.
+Number of atoms: 8
+Number of MOs read in: 44
+Dimension: 44,44,...,44
+Number of basis functions parsed:  44
+Performing Lowdin orthogonalization
+Reading CI vectors from binary ORCA file orca.cis
+Number of vectors: 10
+Detected unrestricted calculation!
+! Reading ALPHA coefficients ...
+  nmo: 44 , nocc: 16 , nact: 12 , nvir: 28
+  mult: 2 , iroot: 0
+  Ene: 2.1287 eV
+  mult: 2 , iroot: 1
+  Ene: 2.6425 eV
+  mult: 2 , iroot: 2
+  Ene: 3.1094 eV
+  mult: 2 , iroot: 3
+  Ene: 4.1264 eV
+  mult: 2 , iroot: 4
+  Ene: 4.2893 eV
+  mult: 2 , iroot: 5
+  Ene: 4.7798 eV
+  mult: 2 , iroot: 6
+  Ene: 4.8496 eV
+  mult: 2 , iroot: 7
+  Ene: 5.0750 eV
+  mult: 2 , iroot: 8
+  Ene: 5.5824 eV
+  mult: 2 , iroot: 9
+  Ene: 5.8305 eV
+
+Reading structure from mo_file orca.molden.input
+Number of atoms: 8
+Composition: C2 H4 O2 
+
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+
+*** Computing domain NTOs ... ***
+DNTOs for  1(2)A
+Norm = 0.03 < min_occ. Skipping _hole-F01 ...
+Norm = 0.01 < min_occ. Skipping _hole-F02 ...
+DNTOs for  2(2)A
+Norm = 0.04 < min_occ. Skipping _hole-F01 ...
+Norm = 0.00 < min_occ. Skipping _hole-F02 ...
+DNTOs for  3(2)A
+Norm = 0.03 < min_occ. Skipping _hole-F01 ...
+Norm = 0.00 < min_occ. Skipping _hole-F02 ...
+DNTOs for  4(2)A
+Calculating particle/hole density with orbkit for 4-2-A_hole-F01
+Calculating particle/hole density with orbkit for 4-2-A_hole-F02
+DNTOs for  5(2)A
+Calculating particle/hole density with orbkit for 5-2-A_hole-F01
+Norm = 0.01 < min_occ. Skipping _hole-F02 ...
+DNTOs for  6(2)A
+Norm = 0.00 < min_occ. Skipping _hole-F01 ...
+Norm = 0.00 < min_occ. Skipping _hole-F02 ...
+DNTOs for  7(2)A
+Calculating particle/hole density with orbkit for 7-2-A_hole-F01
+Norm = 0.00 < min_occ. Skipping _hole-F02 ...
+DNTOs for  8(2)A
+Norm = 0.00 < min_occ. Skipping _hole-F01 ...
+Calculating particle/hole density with orbkit for 8-2-A_hole-F02
+DNTOs for  9(2)A
+Norm = 0.00 < min_occ. Skipping _hole-F01 ...
+Calculating particle/hole density with orbkit for 9-2-A_hole-F02
+DNTOs for  10(2)A
+Norm = 0.00 < min_occ. Skipping _hole-F01 ...
+Norm = 0.00 < min_occ. Skipping _hole-F02 ...
+WARNING: no singular values above the default min_occ=0.05 found. No p_h_dens will be created for this state.
+WARNING: no singular values above the default min_occ=0.05 found. No p_h_dens will be created for this state.
+WARNING: no singular values above the default min_occ=0.05 found. No p_h_dens will be created for this state.
+Calculating particle/hole density with orbkit for 4-2-A
+Calculating particle/hole density with orbkit for 5-2-A
+WARNING: no singular values above the default min_occ=0.05 found. No p_h_dens will be created for this state.
+Calculating particle/hole density with orbkit for 7-2-A
+Calculating particle/hole density with orbkit for 8-2-A
+Calculating particle/hole density with orbkit for 9-2-A
+WARNING: no singular values above the default min_occ=0.05 found. No p_h_dens will be created for this state.
+Transition density between ground state and excited state 1(2)A
+Transition density between ground state and excited state 2(2)A
+Transition density between ground state and excited state 3(2)A
+Transition density between ground state and excited state 4(2)A
+Transition density between ground state and excited state 5(2)A
+Transition density between ground state and excited state 6(2)A
+Transition density between ground state and excited state 7(2)A
+Transition density between ground state and excited state 8(2)A
+Transition density between ground state and excited state 9(2)A
+Transition density between ground state and excited state 10(2)A
+
+ *** ALPHA-spin results ***
+
+state       dE(eV)    f     Om    POS     PR     CT    COH   CTnt  PRNTO   Z_HE
+--------------------------------------------------------------------------------
+1(2)A       2.129      -  0.043  1.303  1.731  0.033  1.059  0.010  2.970  1.222
+2(2)A       2.642      -  0.037  1.018  1.037  0.009  1.009  0.009  1.031  1.133
+3(2)A       3.109      -  0.033  1.006  1.012  0.011  1.011  0.011  1.006  1.120
+4(2)A       4.126      -  0.188  1.282  1.682  0.023  1.039 -0.000  1.584  1.521
+5(2)A       4.289      -  0.803  1.016  1.032  0.016  1.016  0.015  1.016  1.239
+6(2)A       4.780      -  0.001  1.434  1.964  0.036  1.073 -0.030  3.111  1.011
+7(2)A       4.850      -  0.481  1.005  1.009  0.009  1.009  0.005  1.006  1.437
+8(2)A       5.075      -  0.783  1.942  1.128  0.114  1.113 -0.114  1.001  1.218
+9(2)A       5.582      -  0.171  1.825  1.418  0.350  1.295 -0.349  1.003  1.356
+10(2)A      5.831      -  0.003  1.962  1.082  0.071  1.071 -0.070  1.733  1.022
+
+Final output copied to tden_summ.txt
+
+Running beta-spin analysis in directory BETA
+Finished parsing orca.molden.input
+
+MO file orca.molden.input parsed.
+Number of atoms: 8
+Number of MOs read in: 44
+Dimension: 44,44,...,44
+Number of basis functions parsed:  44
+Performing Lowdin orthogonalization
+Reading CI vectors from binary ORCA file orca.cis
+Number of vectors: 10
+Detected unrestricted calculation!
+! Reading BETA coefficients ...
+  nmo: 44 , nocc: 15 , nact: 11 , nvir: 29
+  mult: 2 , iroot: 0
+  Ene: 2.1287 eV
+  mult: 2 , iroot: 1
+  Ene: 2.6425 eV
+  mult: 2 , iroot: 2
+  Ene: 3.1094 eV
+  mult: 2 , iroot: 3
+  Ene: 4.1264 eV
+  mult: 2 , iroot: 4
+  Ene: 4.2893 eV
+  mult: 2 , iroot: 5
+  Ene: 4.7798 eV
+  mult: 2 , iroot: 6
+  Ene: 4.8496 eV
+  mult: 2 , iroot: 7
+  Ene: 5.0750 eV
+  mult: 2 , iroot: 8
+  Ene: 5.5824 eV
+  mult: 2 , iroot: 9
+  Ene: 5.8305 eV
+
+Reading structure from mo_file orca.molden.input
+Number of atoms: 8
+Composition: C2 H4 O2 
+
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+Computation of Omega matrix ...
+
+*** Computing domain NTOs ... ***
+DNTOs for  1(2)A
+Calculating particle/hole density with orbkit for 1-2-A_hole-F01
+Calculating particle/hole density with orbkit for 1-2-A_hole-F02
+DNTOs for  2(2)A
+Calculating particle/hole density with orbkit for 2-2-A_hole-F01
+Calculating particle/hole density with orbkit for 2-2-A_hole-F02
+DNTOs for  3(2)A
+Calculating particle/hole density with orbkit for 3-2-A_hole-F01
+Norm = 0.02 < min_occ. Skipping _hole-F02 ...
+DNTOs for  4(2)A
+Calculating particle/hole density with orbkit for 4-2-A_hole-F01
+Calculating particle/hole density with orbkit for 4-2-A_hole-F02
+DNTOs for  5(2)A
+Calculating particle/hole density with orbkit for 5-2-A_hole-F01
+Calculating particle/hole density with orbkit for 5-2-A_hole-F02
+DNTOs for  6(2)A
+Calculating particle/hole density with orbkit for 6-2-A_hole-F01
+Norm = 0.00 < min_occ. Skipping _hole-F02 ...
+DNTOs for  7(2)A
+Calculating particle/hole density with orbkit for 7-2-A_hole-F01
+Norm = 0.00 < min_occ. Skipping _hole-F02 ...
+DNTOs for  8(2)A
+Norm = 0.04 < min_occ. Skipping _hole-F01 ...
+Calculating particle/hole density with orbkit for 8-2-A_hole-F02
+DNTOs for  9(2)A
+Norm = 0.01 < min_occ. Skipping _hole-F01 ...
+Calculating particle/hole density with orbkit for 9-2-A_hole-F02
+DNTOs for  10(2)A
+Norm = 0.00 < min_occ. Skipping _hole-F01 ...
+Calculating particle/hole density with orbkit for 10-2-A_hole-F02
+Calculating particle/hole density with orbkit for 1-2-A
+Calculating particle/hole density with orbkit for 2-2-A
+Calculating particle/hole density with orbkit for 3-2-A
+Calculating particle/hole density with orbkit for 4-2-A
+Calculating particle/hole density with orbkit for 5-2-A
+Calculating particle/hole density with orbkit for 6-2-A
+Calculating particle/hole density with orbkit for 7-2-A
+Calculating particle/hole density with orbkit for 8-2-A
+Calculating particle/hole density with orbkit for 9-2-A
+Calculating particle/hole density with orbkit for 10-2-A
+Transition density between ground state and excited state 1(2)A
+Transition density between ground state and excited state 2(2)A
+Transition density between ground state and excited state 3(2)A
+Transition density between ground state and excited state 4(2)A
+Transition density between ground state and excited state 5(2)A
+Transition density between ground state and excited state 6(2)A
+Transition density between ground state and excited state 7(2)A
+Transition density between ground state and excited state 8(2)A
+Transition density between ground state and excited state 9(2)A
+Transition density between ground state and excited state 10(2)A
+
+ *** BETA-spin results ***
+
+state       dE(eV)    f     Om    POS     PR     CT    COH   CTnt  PRNTO   Z_HE
+--------------------------------------------------------------------------------
+1(2)A       2.129      -  0.957  1.495  1.986  0.493  1.986  0.082  1.047  1.192
+2(2)A       2.642      -  0.963  1.255  1.554  0.464  1.440 -0.388  1.042  1.142
+3(2)A       3.109      -  0.967  1.275  1.521  0.538  1.371  0.503  1.066  1.184
+4(2)A       4.126      -  0.812  1.711  1.529  0.539  1.394  0.508  1.026  1.253
+5(2)A       4.289      -  0.197  1.515  1.856  0.518  1.863  0.277  1.423  1.514
+6(2)A       4.780      -  0.999  1.272  1.496  0.540  1.335  0.538  1.001  1.005
+7(2)A       4.850      -  0.519  1.006  1.011  0.011  1.011  0.005  1.006  1.423
+8(2)A       5.075      -  0.217  1.748  1.596  0.480  1.610 -0.178  1.643  1.581
+9(2)A       5.582      -  0.829  1.767  1.502  0.458  1.346 -0.447  1.006  1.188
+10(2)A      5.831      -  0.997  1.771  1.494  0.457  1.332 -0.456  1.000  1.006
+
+Final output copied to tden_summ.txt
+Starting spin-summed analysis
+
+ *** Spin-summed results ***
+
+state       dE(eV)    f     Om    POS     PR     CT    COH   CTnt  PRNTO   Z_HE
+--------------------------------------------------------------------------------
+1(2)A       2.129      -  1.000  1.487  1.986  0.474  1.981  0.079      -  1.457
+2(2)A       2.642      -  1.000  1.246  1.545  0.447  1.433 -0.373      -  1.294
+3(2)A       3.109      -  1.000  1.266  1.522  0.520  1.372  0.487      -  1.327
+4(2)A       4.126      -  1.000  1.630  1.666  0.442  1.612  0.412      -  1.905
+5(2)A       4.289      -  1.000  1.114  1.255  0.115  1.141  0.067      -  1.877
+6(2)A       4.780      -  1.000  1.272  1.497  0.540  1.336  0.537      -  1.016
+7(2)A       4.850      -  1.000  1.005  1.010  0.010  1.010  0.005      -  2.045
+8(2)A       5.075      -  1.000  1.900  1.226  0.194  1.214 -0.128      -  1.925
+9(2)A       5.582      -  1.000  1.777  1.492  0.439  1.340 -0.430      -  1.610
+10(2)A      5.831      -  1.000  1.771  1.494  0.456  1.332 -0.454      -  1.027
+
+Final output copied to tden_summ.txt
+CPU time:  5.2 s, wall time: 5.7 s
