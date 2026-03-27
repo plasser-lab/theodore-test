@@ -9,10 +9,10 @@ background white
 mo fill
 mo cutoff 0.030
 
-mo color orange green
+mo color blue red
 mo 15
 write image pngt "molden_no_ci-drt1-state2-sp_MO_15.png"
-mo color orange green
+mo color blue red
 mo 16
 write image pngt "molden_no_ci-drt1-state2-sp_MO_16.png"
 mo color orange green
