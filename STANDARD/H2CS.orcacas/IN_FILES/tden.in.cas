@@ -1,0 +1,11 @@
+rtype='orcaCAS'
+rfile='orca.out'
+read_binary=True
+mo_file='orca.molden.input'
+at_lists=[[1, 2, 3], [4]]
+Om_formula=2
+eh_pop=0
+comp_ntos=False
+comp_dntos=False
+comp_ntos=False
+prop_list=['Om', 'POS', 'PR', 'CT', 'COH', 'CTnt']
