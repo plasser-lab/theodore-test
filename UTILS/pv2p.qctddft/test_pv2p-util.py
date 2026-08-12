@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import os
 from theodore import lib_pytest
 
 def test_standard():
@@ -13,6 +14,10 @@ def test_standard():
 
     stdin = open('../IN_FILES/plot_frag_decomp.in', 'r').read()
     pjob.run_util('plot_frag_decomp', stdin)
+
+    stdin = open('../IN_FILES/spec_eps.in', 'r').read()
+    pjob.run_util('spectrum tden_summ.txt', stdin)
+    os.rename('spectrum.dat', 'spectrum-eps.dat')
 
     stdin = open('../IN_FILES/spectrum.in', 'r').read()
     pjob.run_util('spectrum tden_summ.txt tden_summ2.txt', stdin)
