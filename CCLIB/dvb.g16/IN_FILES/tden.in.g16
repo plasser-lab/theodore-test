@@ -1,0 +1,11 @@
+rtype='cclib'
+rfile='dvb_td.out'
+cclib_mo_file='dvb_sp.out'
+at_lists=[[1, 2, 3, 4, 5, 6, 7, 8, 19, 20], [9, 10, 11, 12, 13, 14, 15, 16, 17, 18]]
+Om_formula=2
+comp_ntos=True
+jmol_orbitals=False
+molden_orbitals=False
+prop_list=['Om', 'POS', 'PR', 'CT', 'COH', 'PRNTO']
+output_prec=(9,5)
+output_file='tden_summ_g16.txt'

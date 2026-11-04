@@ -1,0 +1,6 @@
+Divinylbenzene, B3LYP/STO-3G, Gaussian 16 Rev. A.03.
+TDDFT job (dvb_td.out) without pop=full; the MOs are read from the single
+point dvb_sp.out (pop=full) whose orbitals the TDDFT job used via
+guess=read geom=allcheck (option cclib_mo_file).
+Source: cclib regression data, data/Gaussian/basicGaussian16
+(https://github.com/cclib/cclib, BSD 3-Clause license).

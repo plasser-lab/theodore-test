@@ -1,0 +1,8 @@
+rtype='orca_json'
+rfile='job.json'
+at_lists=[[1], [2, 3]]
+Om_formula=2
+comp_ntos=True
+prop_list=['Om', 'POS', 'PR', 'CT', 'COH', 'PRNTO']
+output_prec=(9,5)
+output_file='tden_summ_json.txt'
