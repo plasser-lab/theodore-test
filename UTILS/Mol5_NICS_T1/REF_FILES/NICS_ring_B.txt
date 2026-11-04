@@ -1,0 +1,8 @@
+Ring centroid: (-1.93011, -0.03070, -0.00002)
+Ring normal:   ( 0.00043,  0.00007,  1.00000)
+NICS = -sigma (ppm); NICS_zz: component along the ring normal;
+NICS_eig: eigenvalue whose eigenvector is closest to the ring normal (angle in deg)
+ Point    height    offset   NICS_iso    NICS_zz   NICS_eig  angle  label
+    P3   -0.0000    0.0000    -3.6389    10.8117    10.8117   0.02  NICS(0)
+    P4    1.0000    0.0000    -7.0877   -15.2323   -15.5127   5.08  NICS(1)
+    P5   -1.0000    0.0000    -7.0834   -15.2259   -15.5008   5.00  NICS(-1)

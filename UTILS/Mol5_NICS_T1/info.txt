@@ -1,0 +1,13 @@
+NICS/VIST test for an open-shell triplet state (T1, UPBE1PBE/def2-SVP, Gaussian 09)
+with ghost atoms at NICS(0) and NICS(+-1) of both five-membered rings.
+commands:
+  theodore plot_vist -r '1 6 2 8 9' gaussian.log
+  (ring '2 12 3 10 8' is evaluated through lib_NICS, written to NICS_ring_B.txt)
+
+Source of QC_FILES/gaussian.log: Mol5/NICS/A_T1/gaussian.log of
+  F. Plasser, Y. Xing, Research Data for "Proton transfer induced excited-state
+  aromaticity gain for chromophores with maximal Stokes shifts",
+  Loughborough University (2024), https://doi.org/10.17028/rd.lboro.26298796
+The dataset is published under CC BY-NC 4.0. The author re-released this file
+under GPL-3.0 for the TheoDORE tests (https://github.com/plasser-lab/theodore/issues/88).
+The file is unchanged.
