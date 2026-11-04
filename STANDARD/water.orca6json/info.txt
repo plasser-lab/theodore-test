@@ -1,0 +1,9 @@
+Water, B3LYP/def2-TZVP, CPCM(hexane), TDA with 31 singlet roots, ORCA 6.1.1.
+job.json was written by orca_2json (default configuration), job.property.json
+is the property file of the same job (rtype='orca_json').
+Source: ORCA Python Interface test data, tests/json_files/gbw/test_exmp010_uvvis_job.json
+and tests/json_files/property/test_exmp010_uvvis_job.property.json
+(https://github.com/faccts/opi, GPL-3.0).
+Independent check with PySCF (same atoms and def2-TZVP basis): C^T S C = 1 to 2e-8
+with the ORCA sign convention for the f(+-3) functions, and the Lowdin Omega
+fragment matrices of all 31 states agree with OmFrag.txt to 5e-6.
