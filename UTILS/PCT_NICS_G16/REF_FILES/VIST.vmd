@@ -1,0 +1,55 @@
+mol new coor0.xyz
+axes location Off
+display projection Orthographic
+display depthcue off
+color Display Background white
+menu graphics on
+mol modstyle 0 0 Licorice 0.100000 30.000000 30.000000
+# Uncomment to hide hydrogens
+# mol modselect 0 0 not element H
+
+# Use this for rings
+mol addrep 0
+mol modstyle 1 0 PaperChain 0.050000 10.000000
+mol modmaterial 1 0 Glass3
+draw delete all
+
+draw color blue
+draw cylinder {-0.641 -0.107 -0.000} { 0.641  0.107 -0.000} radius  0.100
+draw sphere { 0.641  0.107 -0.000} radius  0.130
+draw sphere {-0.641 -0.107 -0.000} radius  0.130
+draw color blue
+draw cylinder { 0.000 -0.650 -0.000} { 0.000  0.650 -0.000} radius  0.100
+draw sphere { 0.000  0.650 -0.000} radius  0.130
+draw sphere { 0.000 -0.650 -0.000} radius  0.130
+draw color red
+draw cylinder { 0.000 -0.000 -0.988} {-0.000  0.000  0.988} radius  0.100
+draw sphere {-0.000  0.000  0.988} radius  0.198
+draw sphere { 0.000 -0.000 -0.988} radius  0.198
+
+draw color blue
+draw cylinder {-0.551  0.165 -1.004} { 0.588 -0.176 -0.996} radius  0.100
+draw sphere { 0.588 -0.176 -0.996} radius  0.119
+draw sphere {-0.551  0.165 -1.004} radius  0.119
+draw color blue
+draw cylinder { 0.174  0.514 -1.000} {-0.137 -0.525 -1.000} radius  0.100
+draw sphere {-0.137 -0.525 -1.000} radius  0.108
+draw sphere { 0.174  0.514 -1.000} radius  0.108
+draw color red
+draw cylinder { 0.020 -0.006 -1.897} { 0.017 -0.005 -0.103} radius  0.100
+draw sphere { 0.017 -0.005 -0.103} radius  0.179
+draw sphere { 0.020 -0.006 -1.897} radius  0.179
+
+draw color blue
+draw cylinder { 0.501 -0.150  0.999} {-0.538  0.161  1.000} radius  0.100
+draw sphere {-0.538  0.161  1.000} radius  0.108
+draw sphere { 0.501 -0.150  0.999} radius  0.108
+draw color blue
+draw cylinder {-0.189 -0.564  1.000} { 0.152  0.575  1.000} radius  0.100
+draw sphere { 0.152  0.575  1.000} radius  0.119
+draw sphere {-0.189 -0.564  1.000} radius  0.119
+draw color red
+draw cylinder {-0.015  0.005  0.103} {-0.022  0.007  1.897} radius  0.100
+draw sphere {-0.022  0.007  1.897} radius  0.179
+draw sphere {-0.015  0.005  0.103} radius  0.179
+

@@ -1,0 +1,85 @@
+axes location Off
+display projection Orthographic
+display depthcue off
+color Display Background white
+menu graphics on
+mol modstyle 0 0 Licorice 0.100000 30.000000 30.000000
+# Uncomment to hide hydrogens
+# mol modselect 0 0 not element H
+
+# Use this for rings
+mol addrep 0
+mol modstyle 1 0 PaperChain 0.050000 10.000000
+mol modmaterial 1 0 Glass3
+draw delete all
+
+draw color blue
+draw cylinder {-0.488 -0.776 -0.001} { 0.376  1.499  0.000} radius  0.100
+draw sphere { 0.376  1.499  0.000} radius  0.243
+draw sphere {-0.488 -0.776 -0.001} radius  0.243
+draw color blue
+draw cylinder {-0.941  0.942 -0.001} { 0.829 -0.218  0.001} radius  0.100
+draw sphere { 0.829 -0.218  0.001} radius  0.212
+draw sphere {-0.941  0.942 -0.001} radius  0.212
+draw color blue
+draw cylinder {-0.055  0.362 -0.710} {-0.057  0.362  0.710} radius  0.100
+draw sphere {-0.057  0.362  0.710} radius  0.142
+draw sphere {-0.055  0.362 -0.710} radius  0.142
+
+draw color blue
+draw cylinder {-0.063  0.371 -0.599} {-0.049  0.353  2.598} radius  0.100
+draw sphere {-0.049  0.353  2.598} radius  0.320
+draw sphere {-0.063  0.371 -0.599} radius  0.320
+draw color blue
+draw cylinder { 0.440  0.401  0.934} {-0.553  0.322  1.065} radius  0.100
+draw sphere {-0.553  0.322  1.065} radius  0.100
+draw sphere { 0.440  0.401  0.934} radius  0.100
+draw color blue
+draw cylinder { 0.100 -0.322  0.932} {-0.213  1.046  1.067} radius  0.100
+draw sphere {-0.213  1.046  1.067} radius  0.141
+draw sphere { 0.100 -0.322  0.932} radius  0.141
+
+draw color blue
+draw cylinder {-0.062  0.371  0.598} {-0.050  0.353 -2.598} radius  0.100
+draw sphere {-0.050  0.353 -2.598} radius  0.320
+draw sphere {-0.062  0.371  0.598} radius  0.320
+draw color blue
+draw cylinder { 0.440  0.401 -0.935} {-0.552  0.322 -1.066} radius  0.100
+draw sphere {-0.552  0.322 -1.066} radius  0.100
+draw sphere { 0.440  0.401 -0.935} radius  0.100
+draw color blue
+draw cylinder {-0.213  1.046 -1.068} { 0.101 -0.322 -0.933} radius  0.100
+draw sphere { 0.101 -0.322 -0.933} radius  0.141
+draw sphere {-0.213  1.046 -1.068} radius  0.141
+
+draw color blue
+draw cylinder {-2.465  0.928  0.000} {-1.395 -0.989 -0.000} radius  0.100
+draw sphere {-1.395 -0.989 -0.000} radius  0.220
+draw sphere {-2.465  0.928  0.000} radius  0.220
+draw color blue
+draw cylinder {-1.117  0.269 -0.001} {-2.743 -0.330  0.001} radius  0.100
+draw sphere {-2.743 -0.330  0.001} radius  0.173
+draw sphere {-1.117  0.269 -0.001} radius  0.173
+draw color red
+draw cylinder {-1.931 -0.031 -0.986} {-1.929 -0.031  0.986} radius  0.100
+draw sphere {-1.929 -0.031  0.986} radius  0.197
+draw sphere {-1.931 -0.031 -0.986} radius  0.197
+
+draw color blue
+draw cylinder {-1.826 -0.035 -0.177} {-2.034 -0.026  2.177} radius  0.100
+draw sphere {-2.034 -0.026  2.177} radius  0.236
+draw sphere {-1.826 -0.035 -0.177} radius  0.236
+draw color blue
+draw cylinder {-2.198  0.581  0.964} {-1.661 -0.643  1.036} radius  0.100
+draw sphere {-1.661 -0.643  1.036} radius  0.134
+draw sphere {-2.198  0.581  0.964} radius  0.134
+
+draw color blue
+draw cylinder {-1.827 -0.035  0.177} {-2.034 -0.026 -2.177} radius  0.100
+draw sphere {-2.034 -0.026 -2.177} radius  0.236
+draw sphere {-1.827 -0.035  0.177} radius  0.236
+draw color blue
+draw cylinder {-1.662 -0.643 -1.036} {-2.199  0.581 -0.964} radius  0.100
+draw sphere {-2.199  0.581 -0.964} radius  0.134
+draw sphere {-1.662 -0.643 -1.036} radius  0.134
+

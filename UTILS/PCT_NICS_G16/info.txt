@@ -1,0 +1,10 @@
+NICS/VIST test for a Gaussian 16 (Revision C.02) NMR log file
+([2.2.2.2]paracyclophanetetraene, PBE1PBE/Def2TZVP, closed shell)
+with ghost atoms at NICS(0) and NICS(+-1) of the macrocycle.
+commands:
+  theodore plot_vist -c -r '19 16 5 1 2 10 4 6 9 8 15 22 24 33 36 34 38 55 53 51 52 48 45 47 43 41 17 28 25 30 26 20' PCT_gaussian.log
+  (ring: all 32 C atoms of the macrocycle, sorted by their angle around the ring axis)
+
+Source of QC_FILES/PCT_gaussian.log: provided by F. Plasser in
+https://github.com/plasser-lab/theodore/issues/88 and released under GPL-3.0
+with this repository. The file is unchanged.
