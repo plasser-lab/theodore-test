@@ -86,7 +86,7 @@ def test_ring_analysis(ref):
     assert vals[3]['NICS_zz'] == pytest.approx(-numpy.dot(n, numpy.dot(sigma, n)))
     # NICS_zz is also given by the symmetric part only
     assert vals[3]['NICS_zz'] == pytest.approx(-numpy.dot(n, numpy.dot(0.5*(sigma + sigma.T), n)))
-    # NICS_eig: eigenvalue whose eigenvector is closest to the ring normal
+    # NICS_ev: eigenvalue whose eigenvector is closest to the ring normal
     for r in res:
         point = ref.NICS_data[r['point']]
         mu = numpy.argmax([abs(numpy.dot(n, point.coor[:, i])) / numpy.linalg.norm(point.coor[:, i]) for i in range(3)])
@@ -241,16 +241,16 @@ def test_plot_vist_ring(tmp_path, qccode):
     ring = open('NICS_ring.txt').read()
     assert 'NICS(0)' in ring and 'NICS(1)' in ring and 'NICS(-1)' in ring
     assert '-6.4439' in ring
-    assert 'NICS_eig' in ring
+    assert 'NICS_ev' in ring
 
-def test_nics_prep_action(tmp_path, ref):
+def test_prep_nics_action(tmp_path, ref):
     os.chdir(tmp_path)
     with open('mol.xyz', 'w') as f:
         f.write("%i\n\n"%len(ref.atoms))
         for at in ref.atoms:
             f.write("%s %.6f %.6f %.6f\n"%({6: 'C', 1: 'H'}[at['Z']], *at['coor']))
     with mock_stdout() as out:
-        sys.argv = ['theodore', 'nics_prep', 'mol.xyz', '4 5 7 9 8 6', '-b', '-q', 'gaussian', '-o', 'bq.txt']
+        sys.argv = ['theodore', 'prep_nics', 'mol.xyz', '4 5 7 9 8 6', '-b', '-q', 'gaussian', '-o', 'bq.txt']
         ActionFactory.from_commandline()
     bq = [l.split() for l in open('bq.txt').readlines()]
     assert len(bq) == 3 and all(w[0] == 'Bq' for w in bq)
@@ -258,6 +258,6 @@ def test_nics_prep_action(tmp_path, ref):
 
     # Other codes are not implemented yet
     with mock_stdout() as out:
-        sys.argv = ['theodore', 'nics_prep', 'mol.xyz', '4 5 7 9 8 6', '-q', 'qchem']
+        sys.argv = ['theodore', 'prep_nics', 'mol.xyz', '4 5 7 9 8 6', '-q', 'qchem']
         with pytest.raises(Exception, match='qccode'):
             ActionFactory.from_commandline()
